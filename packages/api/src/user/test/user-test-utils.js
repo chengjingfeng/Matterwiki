@@ -34,10 +34,10 @@ exports.makePasswordUpdatePayload = function makePasswordUpdatePayload() {
         .output()
 }
 
-exports.makeLoginPayload = function() {
+exports.makeLoginPayload = function () {
     return pick(exports.makeUserData(), ['email', 'password'])
 }
-exports.makeUpdatePayload = function() {
+exports.makeUpdatePayload = function () {
     return pick(exports.makeUserData(), ['name', 'email', 'about'])
 }
 

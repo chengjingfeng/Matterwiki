@@ -10,3 +10,8 @@
 * `DB_LOG_DEBUG`
 * `SERVER_HOST`
 * `SERVER_PORT`
+
+
+```
+"start": "concurrently --kill-others --prefix-colors 'bgGreen.bold,bgMagenta.italic'  'npm:start:client' 'npm:start:api'",
+```

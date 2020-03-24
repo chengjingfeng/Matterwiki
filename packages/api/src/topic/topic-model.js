@@ -208,11 +208,9 @@ class TopicModel extends Model {
         )
 
         await Promise.map(['article', 'articleHistory'], related => {
-            return this.relatedQuery(related)
-                .for(id)
-                .update({
-                    topicId: uncategorisedTopicId,
-                })
+            return this.relatedQuery(related).for(id).update({
+                topicId: uncategorisedTopicId,
+            })
         })
 
         return this.query().deleteById(id)
